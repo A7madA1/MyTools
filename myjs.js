@@ -1,15 +1,10 @@
-var n1=document.getElementById("btn1")
-n1.onclick=function check()
-{
-    var name=window.txtUser.value;
-    var pass=window.txtPass.value;
-   if(name=='aa'&pass=='aa')
-   {
-   document.getElementById("lbl").innerHTML="True";
-   }   
-   else
-   {
-    document.getElementById("lbl").innerHTML="False";
-   } 
+const nav = document.querySelector('.nav')
+window.addEventListener('scroll', fixNav)
 
+function fixNav() {
+    if(window.scrollY > nav.offsetHeight + 150) {
+        nav.classList.add('active')
+    } else {
+        nav.classList.remove('active')
+    }
 }
